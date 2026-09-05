@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import threading
 import urllib.request
@@ -7,7 +8,10 @@ from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Callable, Optional
 
-TOOLS_DIR = Path(__file__).parent.parent.parent / "tools"
+if getattr(sys, "frozen", False):
+    TOOLS_DIR = Path(sys.executable).parent / "tools"
+else:
+    TOOLS_DIR = Path(__file__).parent.parent.parent / "tools"
 
 TOOLS = [
     {

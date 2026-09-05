@@ -17,6 +17,9 @@ python main.py
 
 Requires Windows. Run as Administrator for full registry and prefetch access.
 
+The packaged application is available at `dist/hwh-tool.exe`. Tools, including
+espouken, are downloaded from the Tools view when needed and are not bundled.
+
 ## Structure
 
 ```
